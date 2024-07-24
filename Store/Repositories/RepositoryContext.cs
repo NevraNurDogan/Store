@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Entities.Models;
-namespace Repositories{
-    
+namespace Repositories
+{
+
     public class RepositoryContext : DbContext
     {
         public DbSet<Product> Products { get; set; }//tablo oluşturuyor
+        public DbSet<Category> Categories { get; set; }
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
         {
             //: base(options) ifadesi, RepositoryContext sınıfının yapıcı metodunun,
@@ -21,7 +23,12 @@ namespace Repositories{
                 new Product() { ProductId = 3, ProductName = "Mouse", Price = 500 },
                 new Product() { ProductId = 4, ProductName = "Monitor", Price = 7_000 },
                 new Product() { ProductId = 5, ProductName = "Dack", Price = 1_500 }
-            
+
+            );
+            modelBuilder.Entity<Category>()
+            .HasData(
+                new Category() { CategoryId = 1, CategoryName = "Books" },
+                new Category() { CategoryId = 2, CategoryName = "Electronic" }
             );
         }
     }

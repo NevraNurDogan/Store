@@ -1,17 +1,26 @@
 using Repositories.Contracts;
 
-namespace Repositories{
-    public class RepositoryManager: IRepositoryManager{
+namespace Repositories
+{
+    public class RepositoryManager : IRepositoryManager
+    {
         protected readonly RepositoryContext _context;// sadece base classta değil devraldığım classlarda da kullanmak istiyorum. bu yüzden protected
-
         private readonly IProductRepository _productRepository;
-        public RepositoryManager(IProductRepository productRepository){
+         private readonly ICategoryRepository _categoryRepository;
+        public RepositoryManager(IProductRepository productRepository,
+        RepositoryContext context, 
+        ICategoryRepository categoryRepository )
+        {
+            _context = _context;
             _productRepository = productRepository;
-            _context=  _context;
+            _categoryRepository = categoryRepository;
         }
-       public IProductRepository Product=>_productRepository;      
-        public void Save(){
-        _context.SaveChanges();
-       }
+        public IProductRepository Product => _productRepository;
+
+        public ICategoryRepository Category => _categoryRepository;
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
     }
 }
