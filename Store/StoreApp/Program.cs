@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Repositories;
 using Repositories.Contracts;
+using Services;
+using Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);// web uygulaması inşaa edici
 
@@ -14,6 +15,10 @@ builder.Services.AddDbContext<RepositoryContext>(options =>{
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository,CategoryRepository>();//IoC yapıdaki kayıtların tanımı yapılıyor. 
+
+builder.Services.AddScoped<IServiceManager,ServiceManager>();//IoC yapıdaki kayıtların tanımı yapılıyor. 
+builder.Services.AddScoped<IProductService,ProductManager>();//Configrasyon adımı
+builder.Services.AddScoped<ICategoryService,CategoryManager>();
 var app = builder.Build();
 
 app.UseStaticFiles();

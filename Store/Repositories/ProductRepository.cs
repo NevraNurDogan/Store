@@ -1,6 +1,6 @@
 using Entities.Models;
-using Entities; 
 using Repositories.Contracts;
+
 namespace Repositories
 {
     public class ProductRepository : RepositoryBase<Product>, IProductRepository{
@@ -8,9 +8,10 @@ namespace Repositories
 
 
         }
-     public IQueryable<Product> GetAllProduct(bool trackChanges)=>FindAll(trackChanges);
-    //Interface
-    public Product? GetOneProduct(int id,bool trackChanges){
+     public IQueryable<Product> GetAllProducts(bool trackChanges)=>FindAll(trackChanges);
+      
+        //Interface
+        public Product? GetOneProduct(int id,bool trackChanges){
         return FindByCondition(p=> p.ProductId.Equals(id), trackChanges );
     }
     }
