@@ -17,7 +17,7 @@ namespace Repositories
 
         public void Create(T entity)
         {
-           _context.Set<T>().Add(entity);
+            _context.Set<T>().Add(entity);
         }
 
         public IQueryable<T> FindAll(bool trackChanges)
@@ -35,11 +35,14 @@ namespace Repositories
 
         public T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges)
         {
-             return trackChanges
-            ? _context.Set<T>().Where(expression).SingleOrDefault()//bir kayıt döndürmesini sağlar
-            : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
+            return trackChanges
+           ? _context.Set<T>().Where(expression).SingleOrDefault()//bir kayıt döndürmesini sağlar
+           : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
         }
 
-       
+        public void Remove(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
     }
 }

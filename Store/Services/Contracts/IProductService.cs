@@ -8,8 +8,7 @@ namespace Services.Contracts
         IEnumerable<Product> GetAllProducts(bool trackChanges);
         Product? GetOneProduct(int id, bool trackChanges);//ürün getirebilecek
         void CreateProduct(Product product);
-
-
-
+        void UpdateOneProduct(Product product);
+        void DeleteOneProduct(int id);
     }
 }
