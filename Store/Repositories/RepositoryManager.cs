@@ -8,10 +8,10 @@ namespace Repositories
         private readonly IProductRepository _productRepository;
          private readonly ICategoryRepository _categoryRepository;
         public RepositoryManager(IProductRepository productRepository,
-        RepositoryContext context, 
+        RepositoryContext context,
         ICategoryRepository categoryRepository )
         {
-            _context = _context;
+            _context = context;
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
         }

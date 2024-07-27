@@ -8,7 +8,10 @@ namespace Repositories
 
 
         }
-     public IQueryable<Product> GetAllProducts(bool trackChanges)=>FindAll(trackChanges);
+
+        public void CreateProduct(Product product) => Create(product);
+
+        public IQueryable<Product> GetAllProducts(bool trackChanges)=>FindAll(trackChanges);
       
         //Interface
         public Product? GetOneProduct(int id,bool trackChanges){

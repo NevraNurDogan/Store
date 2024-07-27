@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ArW0mBshlI=",
+  "dgSpecHash": "dAVNTvgClME=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
+  "projectFilePath": "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Casper\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.0\\microsoft.data.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\Casper\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0\\microsoft.entityframeworkcore.8.0.0.nupkg.sha512",

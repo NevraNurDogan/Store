@@ -7,6 +7,7 @@ namespace Services.Contracts
         //okuma işlemleri
         IEnumerable<Product> GetAllProducts(bool trackChanges);
         Product? GetOneProduct(int id, bool trackChanges);//ürün getirebilecek
+        void CreateProduct(Product product);
 
 
 

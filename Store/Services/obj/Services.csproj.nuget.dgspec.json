@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
+    "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
+        "projectPath": "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\obj\\",
+        "outputPath": "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -180,8 +180,8 @@
               "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj"
+              "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "c:\\Users\\Casper\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj"
               }
             }
           }

@@ -15,6 +15,11 @@ namespace Repositories
             _context = context;
         }
 
+        public void Create(T entity)
+        {
+           _context.Set<T>().Add(entity);
+        }
+
         public IQueryable<T> FindAll(bool trackChanges)
         {//Bu parametre, veri izleme durumunu kontrol eder.
             return trackChanges
