@@ -1,3 +1,4 @@
+using Entities.Dtos;
 using Entities.Models;
 
 namespace Services.Contracts
@@ -7,7 +8,7 @@ namespace Services.Contracts
         //okuma işlemleri
         IEnumerable<Product> GetAllProducts(bool trackChanges);
         Product? GetOneProduct(int id, bool trackChanges);//ürün getirebilecek
-        void CreateProduct(Product product);
+        void CreateProduct(ProductDtoForInsertion product);
         void UpdateOneProduct(Product product);
         void DeleteOneProduct(int id);
     }

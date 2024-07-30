@@ -22,6 +22,8 @@ builder.Services.AddScoped<IServiceManager, ServiceManager>(); // IoC yapıdaki 
 builder.Services.AddScoped<IProductService, ProductManager>(); // Configrasyon adımı
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 var app = builder.Build();
 
 app.UseStaticFiles();
