@@ -4,8 +4,16 @@ using System.Linq.Expressions;
 
 namespace Repositories
 {
+    //Bu sınıf, genel CRUD (Create, Read, Update, Delete) 
+    //işlemlerini sağlamak için bir temel sınıf olarak kullanılır.
     public class RepositoryBase<T> : IRepositoryBase<T>
+    
         where T : class, new()
+        /*  where T : class = > Bu, Tnin bir sınıf, interface, array,
+         delegate, veya string gibi bir referans tipi olması gerektiği anlamına gelir.
+         where T : new() = > Bu kısıtlama ise, T türünün bir parametresiz yapıcı metoda 
+         (constructor) sahip olması gerektiğini belirtir. Bu sayede, RepositoryBase 
+         sınıfı içinde new T() gibi bir kullanım yapılabilir.*/
     {
         protected readonly RepositoryContext _context;// sadece base classta değil devraldığım classlarda da kullanmak istiyorum. 
                                                       //bu yüzden protected
@@ -43,6 +51,11 @@ namespace Repositories
         public void Remove(T entity)
         {
             _context.Set<T>().Remove(entity);
+        }
+
+        public void Update(T entity)
+        {
+           _context.Set<T>().Update(entity);
         }
     }
 }
