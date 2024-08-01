@@ -7,12 +7,12 @@ namespace Entities.Dtos
         public int ProductId { get; init; }
 
         [Required(ErrorMessage = "Product Name id required.")]
-        public String? ProductName { get; init; } = String.Empty;
+        public string? ProductName { get; init; } = string.Empty;
         [Required(ErrorMessage = "Price id required.")]
 
         public decimal Price { get; init; }
-        public String? Summary { get; init; } = String.Empty;
-        public String? ImageUrl { get; set; }
+        public string? Summary { get; init; } = string.Empty;
+        public string? ImageUrl { get; set; }
         public int? CategoryId { get; init; }  //Foreign Key
 
     }

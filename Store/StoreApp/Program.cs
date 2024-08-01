@@ -7,6 +7,7 @@ using Services.Contracts;
 var builder = WebApplication.CreateBuilder(args); // web uygulaması inşaa edici
 
 builder.Services.AddControllersWithViews(); // hem controller'ların (denetleyiciler) hem de view'ların (görünümler) kullanılabilmesi için gereken altyapıyı sağlar
+builder.Services.AddRazorPages();//controller olmadan view yapısı oluşturmak için 
 
 builder.Services.AddDbContext<RepositoryContext>(options =>
 {
@@ -43,5 +44,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
+app.MapRazorPages();
+
+app.MapControllers();
 
 app.Run();
