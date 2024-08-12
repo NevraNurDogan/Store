@@ -12,13 +12,16 @@ namespace Repositories
         Ürünlerle ilgili veritabanı işlemleri bu repository üzerinden yapılır.*/
        private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
+        private readonly IOrderRepository _orderRepository;
         public RepositoryManager(IProductRepository productRepository,
         RepositoryContext context,
-        ICategoryRepository categoryRepository)
+        ICategoryRepository categoryRepository,
+        IOrderRepository orderRepository)
         {
             _context = context;
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
+            _orderRepository= orderRepository;
         }
         public IProductRepository Product => _productRepository;
         /*Bu ifade, Product adında bir property tanımlar ve bu property'nin değeri _productRepository alanına (field) bağlıdır.
@@ -27,9 +30,12 @@ namespace Repositories
         Product property’si sadece get işlemi yapar, yani dışarıdan bu property’ye bir değer atanamaz, sadece okunabilir.*/
 
         public ICategoryRepository Category => _categoryRepository;
+
+        public IOrderRepository Order => _orderRepository;
+
         /*Bu tanımlar, RepositoryManager sınıfı içinde IProductRepository ve ICategoryRepository türündeki özel alanların (fields)
-         dışarıya güvenli bir şekilde sunulmasını sağlar. Bu sayede, dışarıdaki kod bu repository'lere erişebilir ve işlem yapabilir,
-          ancak bu repository örneklerini değiştiremez.*/
+dışarıya güvenli bir şekilde sunulmasını sağlar. Bu sayede, dışarıdaki kod bu repository'lere erişebilir ve işlem yapabilir,
+ancak bu repository örneklerini değiştiremez.*/
         public void Save()
         {
             _context.SaveChanges();

@@ -8,6 +8,7 @@ namespace Repositories
     {
         public DbSet<Product> Products { get; set; }//tablo oluşturuyor
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
         {
             //: base(options) ifadesi, RepositoryContext sınıfının yapıcı metodunun,
